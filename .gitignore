@@ -1,1 +1,3 @@
 /.metadata/
+.settings/com.salesforce.ide.core.prefs
+src/package.xml
