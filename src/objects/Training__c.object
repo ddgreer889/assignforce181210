@@ -326,5 +326,4 @@
         <errorDisplayField>StartDate__c</errorDisplayField>
         <errorMessage>Start Date of a batch must be a Monday, Tuesday or a Wednesday.</errorMessage>
     </validationRules>
-
 </CustomObject>
