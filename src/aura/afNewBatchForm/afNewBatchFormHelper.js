@@ -20,6 +20,15 @@
             let month = endDate.getMonth(); 
             let date = endDate.getDate();
             component.set("v.endDate", (year + "-" + (month+1) + "-" + date));
+            startDate = component.get("v.startDate");
+            endDate = component.get("v.endDate");
+            var dateEvent = $A.get("e.c:afNewBatchFormDateEvent");
+            dateEvent.setParams({
+                "startDate" : startDate,
+                "endDate"    : endDate
+            });
+            console.log('dateChanged');
+            dateEvent.fire();
             
         } else { // Thursday || Friday || Saturday || Sunday (no batches start here)
             component.set("v.endDate", "");
@@ -84,5 +93,5 @@
                 }
             }
         } 
-    }
+    },
 })
