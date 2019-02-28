@@ -1,24 +1,11 @@
 public class afNewBatchFormApexController {
     
-    // IT WORKED!
-
     @AuraEnabled
     public static List<Training_Room__c> allRooms (Training_Location__c loc) {
         List<Training_Room__c> rooms = [SELECT Id, Name, TrainingLocation__c
                                         FROM Training_Room__c];
         return rooms;
     }
-    
-    /*
-    @AuraEnabled
-    public static List<User> allTrainers () {
-        List<User> trnrList = [SELECT Id, Name, UserRole.Name
-                               FROM User
-                               WHERE UserRole.Name = 'Trainer' OR UserRole.Name = 'CoTrainer'];
-        System.debug(trnrList);
-        return trnrList;
-    }
-    */
     
     @AuraEnabled
     public static List<Training__c> allTrainings () {

@@ -1,0 +1,4 @@
+<aura:component >
+    <c:afTrainersTabPTO/> <br/>
+    <c:afTrainersTabBatches/>
+</aura:component>

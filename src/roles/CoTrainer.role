@@ -3,7 +3,7 @@
     <caseAccessLevel>Edit</caseAccessLevel>
     <contactAccessLevel>Edit</contactAccessLevel>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>CoTrainer</name>
+    <name>Co-Trainer</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
     <parentRole>Trainer</parentRole>
 </Role>

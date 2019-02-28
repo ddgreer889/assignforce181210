@@ -7,7 +7,6 @@ public class afAvailabilityListContainerController {
     public static List<User> Trainers = [SELECT Id, Name, Available__c
                                          FROM User 
                                          WHERE UserRole.Name = 'Trainer' OR UserRole.Name = 'CoTrainer'];
-    									/*WHERE Available__c!=null*/ /*UserRoleId=trainer role Id*/
     
     @AuraEnabled
     public static List<Training_Room__c> getRooms(){
@@ -57,6 +56,4 @@ public class afAvailabilityListContainerController {
     public static List<Training__c> getAllTrainings(){
         return [SELECT StartDate__c, EndDate__c, Trainer__c, CoTrainer__c FROM Training__c];
     }
-
-
 }

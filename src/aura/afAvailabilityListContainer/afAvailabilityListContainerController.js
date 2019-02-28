@@ -119,9 +119,8 @@
                 roomsNotAtLoc.push(rooms[i]);
             }
         }
-      //  console.log("currentLocRooms: " + currentLocRooms);
-       // console.log("roomsNotAtLoc: " 	+ roomsNotAtLoc);
-        if(loc == "" || null){
+
+        if(loc == "" || loc == null){
             component.set("v.currentLocRooms", null);
             component.set("v.currentLocRooms", rooms);
         } else {
@@ -155,17 +154,4 @@
         }
     },
     
-    /*trainingTrackCreated: function(component, event, helper){
-        var trainings = component.get('v.allTrainings');
-        var trainers = component.get('v.trainers');
-        var currentLocRooms = component.get('v.currentLocRooms');
-        var newTraining = event.getParam('newBatch');
-        trainings.push(newTraining);
-        component.set('allTrainings', trainings);
-        component.set('v.trainers', null);
-        component.set('v.trainers', helper.sortTrainers(helper.sortTrainers(trainers)));
-        component.set('v.currentLocRooms', null);
-        component.set('v.currentLocRooms', currentLocRooms);
-        
-    },*/
 })
