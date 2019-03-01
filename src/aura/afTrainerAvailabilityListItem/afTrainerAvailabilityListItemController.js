@@ -1,19 +1,19 @@
 ({
-	doInit : function(component, event, helper) {
-		console.log('Did you even run?');
-        var trainer = component.get('v.trainer');                     
-        if(trainer.Available__c==="Available"){
+    doInit : function(component, event, helper) {
+        var availability = component.get('v.availability');
+        var trainerId = component.get('v.trainerId');
+        if(availability==="Available"){
             component.set('v.isAvailable', true);
         } else{
             component.set('v.isAvailable', false);
         }
-        console.log('Trainer= ' + trainer);
-        console.log('Skills= ' + JSON.stringify(component.get('v.allSkills')));
-	},
+        
+    },
     selectIsClicked : function(component, event, helper){
-        var selectedEvt = component.getEvent('TrainerIsSelected');
-        var trainer = component.get('v.trainer');
-        selectedEvt.setParam('trainer', trainer);
+        var selectedEvt = $A.get('e.c:TrainerSelected');
+        var trainerId = component.get('v.trainerId');
+        console.log(trainerId);
+        selectedEvt.setParams({'trainerId':trainerId});
         selectedEvt.fire();
     }
 })
