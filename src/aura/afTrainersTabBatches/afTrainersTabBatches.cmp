@@ -1,3 +1,6 @@
 <aura:component >
+    
+    <aura:registerEvent name="afBatchesByTrainer" type="c:afBatchesByTrainerEvent"/>
+    
 	<div>Batches</div>
 </aura:component>

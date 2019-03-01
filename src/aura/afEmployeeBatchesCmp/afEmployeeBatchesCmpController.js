@@ -12,6 +12,6 @@
             { label: 'Trainer', fieldName: 'trainer', type: 'text', sortable: 'true'},
             { label: 'Co-Trainer', fieldName: 'coTrainer', type: 'text', sortable: 'true'}
         ]);   
-            helper.getData(component);
-            },
+        helper.getData(component, event);
+    },
 })

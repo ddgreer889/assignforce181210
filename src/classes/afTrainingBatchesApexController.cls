@@ -10,7 +10,7 @@ public class afTrainingBatchesApexController{
                                FROM Training__c
                                ORDER BY StartDate__c];
            }
-			
+            
            return AllTrainings;
        }
        set;
@@ -61,7 +61,7 @@ public class afTrainingBatchesApexController{
     
     @AuraEnabled
     public static void updateBatchesServer(List<Training__c> updatedBatches){
-		System.debug('Batches to Update: ' + updatedBatches);
+        System.debug('Batches to Update: ' + updatedBatches);
         
         for(integer s = 0; s < updatedBatches.size(); s++){
             if(updatedBatches[s].StartDate__c != null)
@@ -79,5 +79,5 @@ public class afTrainingBatchesApexController{
         update updatedBatches;
         
     }
-	
+    
 }
