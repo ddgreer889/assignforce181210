@@ -1,3 +1,3 @@
 <aura:application implements="force:appHostable" extends="force:slds" >
-    <c:afEmployeeBatchesCmp />
+    <c:afTrainerProfileBatchesComponent />
 </aura:application>
