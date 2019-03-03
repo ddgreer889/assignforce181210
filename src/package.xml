@@ -8,5 +8,13 @@
         <members>PTO__c</members>
         <name>Workflow</name>
     </types>
+    <types>
+        <members>Trainer</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>PermissionSet</name>
+    </types>
     <version>38.0</version>
 </Package>
