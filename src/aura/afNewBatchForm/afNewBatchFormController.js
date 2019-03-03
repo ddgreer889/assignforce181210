@@ -128,7 +128,6 @@
         var locEvent = $A.get("e.c:afNewBatchFormLocationEvent");
         locEvent.setParams({
             "location" : loc,
-            "roomsForLocation" : roomsForLocation
         });
         locEvent.fire();
     },

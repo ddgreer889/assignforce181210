@@ -33,7 +33,7 @@
     
     <!-- Events -->
     <aura:registerEvent name="afNewBatchFormTrack"        type="c:afNewBatchFormTrackEvent"/>
-    <aura:registerEvent name="afNewBatchFormLocation"      type="c:afNewBatchFormLocationEvent"/>
+    <aura:registerEvent name="afNewBatchFormLocation"     type="c:afNewBatchFormLocationEvent"/>
     <aura:registerEvent name="afNewBatchFormDate"         type="c:afNewBatchFormDateEvent"/>
     <aura:registerEvent name="afNewBatchCreated"          type="c:afNewBatchCreatedEvent"/>
     

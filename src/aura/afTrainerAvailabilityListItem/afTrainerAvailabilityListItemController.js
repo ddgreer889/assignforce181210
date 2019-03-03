@@ -1,7 +1,6 @@
 ({
     doInit : function(component, event, helper) {
         var availability = component.get('v.availability');
-        var trainerId = component.get('v.trainerId');
         if(availability==="Available"){
             component.set('v.isAvailable', true);
         } else{
