@@ -17,8 +17,7 @@
             var state = response.getState();
             if(component.isValid() && state === "SUCCESS"){
                 component.set('v.allTrainings', response.getReturnValue());
-                var t = component.get('v.allTrainings');
-              //  console.log("Training: " + t);
+                console.log("Training: " + JSON.stringify(response.getReturnValue()));
             } else{
                 console.log('Error2');
             }
@@ -82,6 +81,7 @@
         }
         for(var i=0; i<currentLocRooms.length; i++){
             for (var j = 0; j < trainings.length; j++) {
+                console.log(trainings[j].TrainingRoom__c);
                 if(currentLocRooms[i].Id == trainings[j].TrainingRoom__c) {
                     var prevStart = new Date(trainings[j].StartDate__c);
                     var prevEnd = new Date(trainings[j].EndDate__c);
@@ -90,7 +90,8 @@
                        (prevStart <= endDate  && endDate <= prevEnd) || 
                        (prevStart >= startDate    && endDate >= prevEnd)){
                         currentLocRooms[i].AVAvailability__c = "No";
-                    }else if(currentLocRooms[i].AVAvailability__c == "No"){
+                        break;
+                    }else{
                         currentLocRooms[i].AVAvailability__c = "Yes";
                     }
                 }
