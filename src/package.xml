@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
-        <name>Flow</name>
-    </types>
-    <types>
-        <members>Trainer</members>
-        <name>Profile</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>PermissionSet</name>
-    </types>
-    <types>
-        <members>PTO__c</members>
-        <name>Workflow</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApprovalProcess</name>
+        <members>AssignForceTestClass</members>
+        <members>ApexTestUtilityClass</members>
+        <members>afTrainingTriggerHelper</members>
+        <name>ApexClass</name>
     </types>
     <version>38.0</version>
 </Package>

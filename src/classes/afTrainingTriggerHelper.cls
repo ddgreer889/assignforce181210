@@ -26,7 +26,7 @@ public class afTrainingTriggerHelper {
             if(training.CoTrainer__c!=null && cotrainerHasSkill!=true){
                 //Creates a new Skill record if the Trainer does not have a skill Associated to that training track
                 Skill__c newSkill = new Skill__c();
-                newSkill.Trainer__c = training.Trainer__c;
+                newSkill.Trainer__c = training.CoTrainer__c;
                 newSkill.Training_Track__c = training.TrainingTrack__c;
                 skillsToCreate.add(newSkill);
             }
