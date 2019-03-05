@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
+=======
+    <classAccesses>
+        <apexClass>afAvailListContainerApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afAvailabilityListContainerController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afNewBatchFormApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afNewTrainingTrackTriggerHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afPTOTabsApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTimelineController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTrainerInfoController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTrainersTabListViewApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTrainersTabPTOApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTrainingBatchesApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTrainingLocationListViewApexController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>afTrainingTriggerHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+>>>>>>> eva-lahtinen
     <custom>true</custom>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
@@ -8,7 +59,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>AddDirectMessageMembers</name>
+=======
+        <name>AllowLightningLogin</name>
+>>>>>>> eva-lahtinen
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -16,6 +71,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>ApexRestServices</name>
     </userPermissions>
     <userPermissions>
@@ -32,6 +88,8 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> eva-lahtinen
         <name>ChatterInternalUser</name>
     </userPermissions>
     <userPermissions>
@@ -40,6 +98,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>ChatterOwnGroups</name>
     </userPermissions>
     <userPermissions>
@@ -64,6 +123,8 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+=======
+>>>>>>> eva-lahtinen
         <name>LightningConsoleAllowedForUser</name>
     </userPermissions>
     <userPermissions>
@@ -72,6 +133,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+<<<<<<< HEAD
         <name>RemoveDirectMessageMembers</name>
     </userPermissions>
     <userPermissions>
@@ -102,4 +164,8 @@
         <enabled>true</enabled>
         <name>ViewSetup</name>
     </userPermissions>
+=======
+        <name>ViewHelpLink</name>
+    </userPermissions>
+>>>>>>> eva-lahtinen
 </Profile>
