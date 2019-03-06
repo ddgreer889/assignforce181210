@@ -17,8 +17,7 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:handler event="force:refreshView" action="{!c.isRefreshed}" />
     <aura:handler name="change" value="{!v.hasChanged}" action="{!c.isRefreshed}"/>
-    
-    <html>
+  
         <div class="slds-card__body slds-card__body_inner">
             <aura:if isTrue="{!v.uncleared}">
                 <div class="slds-card">
@@ -41,11 +40,10 @@
                                 </header>
                             </div>                            
                             <lightning:messages />
-                            <div class="slds-grid slds-grid_align-spread slds-gutters slds-p-horizontal_medium slds-p-bottom_large">
-                                <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-grid slds-gutters slds-p-horizontal_medium slds-p-bottom_large">
+                                <div class="slds-col slds-size_1-of-3">
                                     <lightning:inputField fieldName="FirstName" /><br/>
-                                    <lightning:inputField fieldName="LastName" /><br/>
-                                    <lightning:fileUpload label="Attach receipt"
+                                    <lightning:fileUpload label="Attach resume:"
                                                           name="fileUploader"
                                                           multiple="true"
                                                           accept=".doc, .docx, .pdf"
@@ -53,9 +51,12 @@
                                                           onuploadfinished="{!c.handleFiles}" />
                                     <ui:outputText value="{!v.filename}"/>
                                 </div> 
-                                <div class="slds-col slds-size_1-of-2">
-                                    <lightning:inputField fieldName="City" /><br/>
-                                    <lightning:inputField fieldName="State" />
+                                <div class="slds-col slds-size_1-of-3">
+                                    <lightning:inputField fieldName="LastName" />
+                                </div>
+                                <div class="slds-grid_absolute-center slds-col slds-size_1-of-3">
+                                    <lightning:inputField fieldName="CurrentLocation__c" />
+                                    
                                 </div>    
                             </div>
                         </div>
@@ -63,5 +64,4 @@
                 </div>
             </aura:if>
         </div>
-    </html>
 </aura:component>
