@@ -5,10 +5,12 @@
     <!-- Attributes -->
     <aura:attribute name="allTrainers"     type="List" />
     <aura:attribute name="allCoTrainers"   type="List" />
+    <aura:attribute name="allLocations"        type="Training_Location__c[]" />
     <aura:attribute name="cotrainer"           type="User" />
     <aura:attribute name="endDate"          type="Date" />
     <aura:attribute name="hiddenRoom"          type="Id" />
-    <aura:attribute name="location"            type="Id" />
+    <aura:attribute name="hiddenLoc"        type="Id" />
+    <aura:attribute name="location"            type="Training_Location__c"/>
     <aura:attribute name="locUncleared"    type="Boolean"        default="true"/>
     <aura:attribute name="numWeeks"         type="Integer"       default="10"/>
     <aura:attribute name="openTrainings"       type="List" />
@@ -42,7 +44,6 @@
     <aura:handler name="change"         value="{!v.trainer}"        action="{!c.trainerChanged}"/>
     <aura:handler name="change"         value="{!v.cotrainer}"      action="{!c.trainerChanged}"/>
     <aura:handler name="change"         value="{!v.track}"          action="{!c.trackChanged}"/>
-    <!--aura:handler name="change"         value="{!v.location}"     action="{!c.locChanged}"/-->
     <aura:handler                        event="c:TrainerSelected" action="{!c.setTrainerField}"/>
     <aura:handler                        event="c:roomSelected"        action="{!c.setRoomField}"/>
     
@@ -101,10 +102,15 @@
                         <div class="slds-box">
                             <div class="slds-grid slds-grid_align-spread">
                                 <div class="slds-col slds-size_1-of-3">
-                                    <lightning:inputField fieldName="TrainingLocation__c" aura:id="trainingLocation" value="{!v.location}" onchange="{!c.findRooms}"/>
+                                    <lightning:select name="trainingLoc" label="Training Location" aura:id="trainingLoc" value="{!v.location}" onchange="{!c.findRooms}">
+                                        <aura:iteration items="{!v.allLocations}" var="loc">
+                                            <option value="{!loc.Id}" selected="{!v.loc}">{!loc.OfficeName__c}</option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                    <lightning:inputField fieldName="TrainingLocation__c" value="{!v.hiddenLoc}" hidden="true"/>
                                 </div>
                                 <div class="slds-col slds-size_1-of-3">
-                                    <lightning:select name="trainingRoom" label="Training Rooms" aura:id="trainingRoom" value="{!v.room}" onchange="{!c.selectRoom}">
+                                    <lightning:select name="trainingRoom" label="Training Room" aura:id="trainingRoom" value="{!v.room}" onchange="{!c.selectRoom}">
                                         <aura:iteration items="{!v.roomsForLocation}" var="room">
                                             <option value="{!room.Id}" selected="{!v.room}">{!room.Name}</option>
                                         </aura:iteration>
